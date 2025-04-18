@@ -72,7 +72,7 @@ async def get_forecast(city: str) -> str:
                 return "Не удалось получить прогноз."
             data = await forecast_resp.json()
 
-            result = f"<b>Прогноз погоды в {city.title()} на ближайшие 3 дня:</b>\n\n"
+            result = f"<b>Прогноз погоды в {city.title()} на ближайшие 3 дня:</b>\n"
             days_collected = set()
 
             for entry in data['list']:
